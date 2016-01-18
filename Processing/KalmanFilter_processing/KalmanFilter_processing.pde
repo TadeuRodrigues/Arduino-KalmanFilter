@@ -248,8 +248,8 @@ void drawArtificialHorizon(int x, int y, float[][] pyr)
   pgArtificialHorizonRing = createGraphics(ahWidth+20, ahHeight+20); 
 
   float horizon = getArtificialHorizon(radians(pyr[0][actualSample-1]));
-  pgArtificialHorizon.clear();
   pgArtificialHorizon.beginDraw();
+  pgArtificialHorizon.clear();
 
   // Ground
   pgArtificialHorizon.translate(ahRadius, ahRadius);
@@ -386,7 +386,7 @@ void serialEvent (Serial myPort)
   {
     inString = trim(inString);
     String[] list = split(inString, ':');
-    String testString = trim(list[0]);
+    //String testString = trim(list[0]);
 
     if (list.length != 10) return;
 
